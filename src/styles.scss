@@ -32,6 +32,7 @@ body {
       background-attachment: fixed;
       border: 1px dotted lightgray;
       box-shadow: 0px 0px 6px inset #ff98a981;
+      height: 90%;
 
       .myInnerContainer {
         position: relative;
@@ -125,8 +126,11 @@ body {
           .inn-con {
             min-height: 300px;
             max-height: 600px;
+            
             height: 370px;
-            overflow-y: auto;
+            @apply h-[370px] lg:h-[400px];
+
+            overflow-y: scroll;
 
             &::-webkit-scrollbar {
               width: 8px;
