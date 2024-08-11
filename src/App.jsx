@@ -3,7 +3,7 @@
 // App is the main wrapper of all the contents
 function App() {
   return (
-    <div className="w-2/5 h-4/5 myOuterContainer rounded-lg p-3 ">
+    <div className="w-4/5 lg:w-2/5 h-4/5 myOuterContainer rounded-lg p-3 ">
       <div className=" h-full bg-white rounded-lg py-7 px-2 border border-[lightgray] myInnerContainer">
         {/* lace borders */}
         <div className="laceBorder tp"></div>
@@ -14,10 +14,8 @@ function App() {
         {/* Buttons */}
         <div className="btns">
           <div className="btn add">
-            <img src="assets/btn1.png" />
           </div>
           <div className="btn timer">
-            <img src="assets/btn1.png" />
           </div>
         </div>
         
