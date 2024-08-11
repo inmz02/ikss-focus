@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(assets/checkbg1.png) 0px 0px;
+  background-attachment: fixed;
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  padding: 20rem;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 14px;
+
+  #root {
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+
+    .myOuterContainer {
+      background: url(assets/cushionbg.jpg) 0px 0px;
+      background-attachment: fixed;
+      border: 1px dotted lightgray;
+      box-shadow: 0px 0px 6px inset #ff98a981;
+
+      .myInnerContainer {
+        position: relative;
+
+        .laceBorder {
+          width: 100%;
+          position: absolute;
+          height: 24px;
+          background: url(assets/lace.png) -20px 0px / contain;
+
+          left: 0;
+
+          @apply rounded-tl-lg rounded-tr-lg;
+
+          &.tp {
+            top: 0;
+          }
+
+          &.bt {
+            bottom: 0;
+            transform: rotate(180deg);
+          }
+        }
+
+        .myTitle {
+          font-family: "Playfair Display", serif;
+          text-align: center;
+          font-size: 2rem;
+          color: #fec3d9;
+          filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+            drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+            drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
+            drop-shadow(0px 1px 0px #0000001c);
+        }
+
+        .btns {
+          @apply flex justify-center items-center gap-4 my-4;
+          .btn {
+            width: 126px;
+            height: 30px;
+            background: url(assets/btn1.png) 0px 0px;
+            cursor: pointer;
+
+            &.add {
+              background: url(assets/btn1.png) 0px 0px;
+
+              &:hover, &:active {
+                background: url(assets/btn2.png) 0px 0px;
+              }
+            }
+
+            &.timer {
+              background: url(assets/btnTimer.png) 0px 0px;
+
+              &:hover, &:active {
+                background: url(assets/btnTimer2.png) 0px 0px;
+              }
+            }
+            transition: 300ms;
+            -webkit-transition: 300ms;
+            -moz-transition: 300ms;
+            -ms-transition: 300ms;
+            -o-transition: 300ms;
+          }
+        }
+      }
+    }
+  }
+}
