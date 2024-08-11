@@ -27,6 +27,7 @@ body {
     display: flex;
     justify-content: center !important;
     align-items: center !important;
+    overflow: hidden;
 
     .myOuterContainer {
       background: url(assets/cushionbg.jpg) 0px 0px;
@@ -70,41 +71,57 @@ body {
         }
 
         .btns {
-          @apply flex justify-center items-center gap-7 my-4 mt-6;
+          @apply flex justify-center items-center gap-5 my-4 mt-6;
 
           .btn {
-            width: 177px;
-            height: 41px;
+            width: 37px !important;
+            height: 37px !important;
             background: url(assets/btn1.png);
             cursor: pointer;
             background-repeat: no-repeat;
+            background-size: cover;
 
             &.add {
               background: url(assets/btn1.png) 0px 0px;
+               background-size: cover;
 
               &:hover,
               &:active {
                 background: url(assets/btn2.png) 0px 0px;
+                 background-size: cover;
               }
             }
 
             &.timer {
               background: url(assets/btnTimer.png) 0px 0px;
+               background-size: cover;
 
               &:hover,
               &:active {
                 background: url(assets/btnTimer2.png) 0px 0px;
+                 background-size: cover;
+              }
+            }
+
+            &.save {
+              background: url(assets/save1.png) 0px 0px;
+               background-size: cover;
+
+              &:hover,
+              &:active {
+                background: url(assets/save2.png) 0px 0px;
+                 background-size: cover;
               }
             }
 
             &.expand {
-              width: 41px !important;
-              height: 41px;
               background: url(assets/expand1.png) 0px 0px;
+               background-size: cover;
 
               &:hover,
               &:active {
                 background: url(assets/expand2.png) 0px 0px;
+                 background-size: cover;
               }
             }
           }
@@ -168,7 +185,7 @@ body {
 
         .tickBoxNew {
           border: 1px solid #00000022;
-          
+
           height: 22px;
           width: 22px;
           padding: 3px;
@@ -176,12 +193,10 @@ body {
           &.incomplete {
             background-color: #00000015;
             box-shadow: 0px 0px 5px 1px inset #00000034;
-
           }
 
           &.completed {
-            background: url(./assets/checkbg2.png)
-            0px 0px;
+            background: url(./assets/checkbg2.png) 0px 0px;
             box-shadow: 0px 0px 5px 1px inset #ff32765b;
           }
 
@@ -205,5 +220,26 @@ body {
         }
       }
     }
+  }
+}
+
+.cat {
+  animation: moveSideways 30s infinite;
+  -webkit-animation: moveSideways 30s infinite;
+}
+
+@keyframes moveSideways {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(98%);
+    -webkit-transform: translateX(98%);
+    -moz-transform: translateX(98%);
+    -ms-transform: translateX(98%);
+    -o-transform: translateX(98%);
+}
+  100% {
+    transform: translateX(0); /* Move back to the original position */
   }
 }

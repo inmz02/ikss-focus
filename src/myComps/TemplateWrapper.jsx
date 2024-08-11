@@ -60,7 +60,7 @@ const TemplateWrapper = ({
           </div>
         ))
       ) : (
-        <p></p>
+        <p className="text-gray-400 italic text-xs">omg you're empty. . .</p>
       )}
     </div>
   );

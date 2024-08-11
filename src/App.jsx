@@ -19,8 +19,6 @@ function App() {
     }
   }
 
-
-
   return (
     <div className="w-3/5 lg:w-2/4 myOuterContainer rounded-lg p-3 ">
       <div className=" h-full bg-white rounded-lg py-7 px-5 border border-[lightgray] myInnerContainer">
@@ -35,6 +33,13 @@ function App() {
           <div className="btn add"></div>
           <div className="btn timer"></div>
           <div className="btn expand" onClick={toggleFullScreen}></div>
+          <div className="btn save"></div>
+        </div>
+
+        <div className="w-full">
+          <div className="cat">
+            <img src="https://64.media.tumblr.com/tumblr_mcsfd9NGC01rnr4eb.gif" />
+          </div>
         </div>
 
         <div className="border1"></div>
