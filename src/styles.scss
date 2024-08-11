@@ -124,11 +124,8 @@ body {
           width: 100%;
 
           .inn-con {
-            min-height: 300px;
-            max-height: 600px;
             
-            height: 370px;
-            @apply h-[370px] lg:h-[400px];
+            @apply h-[360px] lg:h-[440px];
 
             overflow-y: scroll;
 
