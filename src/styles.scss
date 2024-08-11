@@ -3,6 +3,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  &::selection {
+    background: #ffabd722;
+  }
 }
 
 body {
@@ -56,7 +60,7 @@ body {
           font-family: "Playfair Display", serif;
           text-align: center;
           font-size: 2rem;
-          color: #fec3d9;
+          color: #f0a2b8;
           filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
             drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
             drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
@@ -70,11 +74,12 @@ body {
             height: 30px;
             background: url(assets/btn1.png) 0px 0px;
             cursor: pointer;
-            
-            &.add{
+
+            &.add {
               background: url(assets/btn1.png) 0px 0px;
 
-              &:hover, &:active {
+              &:hover,
+              &:active {
                 background: url(assets/btn2.png) 0px 0px;
               }
             }
@@ -83,17 +88,19 @@ body {
               background: url(assets/btnTimer.png) 0px 0px;
               margin-left: 0.9rem;
 
-              &:hover, &:active {
+              &:hover,
+              &:active {
                 background: url(assets/btnTimer2.png) 0px 0px;
               }
             }
 
             &.expand {
               width: 30px !important;
-            height: 30px;
+              height: 30px;
               background: url(assets/expand1.png) 0px 0px;
 
-              &:hover, &:active {
+              &:hover,
+              &:active {
                 background: url(assets/expand2.png) 0px 0px;
               }
             }
@@ -107,7 +114,60 @@ body {
             -moz-transition: 300ms;
             -ms-transition: 300ms;
             -o-transition: 300ms;
-}
+          }
+        }
+
+        .border1 {
+          width: 100%;
+          height: 30px;
+          border-bottom: 9px solid white;
+          box-shadow: 0px 0px 3px inset #00000022;
+          padding: 10px;
+          background: url(https://nyaa.neocities.org/images/index2024/checkky.png)
+            0px 0px;
+          position: relative;
+        }
+
+        .entireToDoListContainer {
+          width: 100%;
+
+          .inn-con {
+            min-height: 300px;
+            max-height: 600px;
+            height: 400px;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+              width: 8px;
+              height: 12px;
+              background: white;
+              border-radius: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+            background: #ffa4d166;
+            border-radius: 10px;
+            border: 1px solid #ffabd7;
+          }
+
+          &::-webkit-scrollbar-track {
+            border: 1px solid #ffabd777;
+            border-radius: 10px;
+          }
+          }
+
+          
+
+          .myHeader {
+            font-size: 22px;
+            font-family: "Playfair Display", serif;
+            font-weight: 800;
+            color: #ffacc5;
+            filter: drop-shadow(0px 0px 1px white)
+              drop-shadow(0px 0px 0px white) drop-shadow(0px 0px 1px white)
+              drop-shadow(0px 0px 0px white) drop-shadow(0px 0px 1px white)
+              drop-shadow(0px 0px 1px white) drop-shadow(0px 1px 0px #0000001c);
+          }
         }
       }
     }
