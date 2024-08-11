@@ -17,7 +17,7 @@ const TemplateWrapper = ({
       {inputs && inputs.length > 0 ? (
         inputs.map((input, index) => (
           <div
-            className="flex gap-2 items-center w-full mx-3"
+            className="flex gap-2 items-center w-full"
             key={index}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}

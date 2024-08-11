@@ -19,6 +19,7 @@ body {
   align-items: center !important;
   font-family: "Libre Franklin", sans-serif;
   font-size: 14px;
+  color: #484848;
 
   #root {
     height: 100dvh;
@@ -128,9 +129,9 @@ body {
               height: 360px;
             }
             @media (min-height: 851px) {
-              height: 440px;
+              height: 600px;
             }
-            
+
             overflow-y: scroll;
 
             &::-webkit-scrollbar {

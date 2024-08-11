@@ -1,18 +1,11 @@
 import {
-  IoChevronDownCircleOutline,
-  IoChevronUpCircleOutline,
   IoAddCircleOutline,
 } from "react-icons/io5";
 import { useState, useEffect } from "react";
 
 const MiniSections = ({ title, content, colour, state = false, onAdd }) => {
-  const [openState, setOpenState] = useState(state);
   const [isHovered, setIsHovered] = useState(false);
   const [isMdOrLarger, setIsMdOrLarger] = useState(window.innerWidth >= 767);
-
-  const toggleText = () => {
-    setOpenState((prevState) => !prevState);
-  };
 
    useEffect(() => {
     const handleResize = () => {
@@ -30,8 +23,7 @@ const MiniSections = ({ title, content, colour, state = false, onAdd }) => {
   return (
     <div>
       <div
-        onClick={toggleText}
-        className="cursor-pointer flex justify-between px-3 py-2"
+        className="cursor-pointer flex justify-between py-2"
         onMouseEnter={() => window.innerWidth >= 767 && setIsHovered(true)}
         onMouseLeave={() => window.innerWidth >= 767 && setIsHovered(false)}
       >
@@ -49,18 +41,8 @@ const MiniSections = ({ title, content, colour, state = false, onAdd }) => {
             <IoAddCircleOutline />
           </span>
         </h2>
-
-        <div className="flex myIcons h-full text-2xl">
-          <div className={`${isHovered ? colour : "text-white"}`}>
-            {openState ? (
-              <IoChevronUpCircleOutline />
-            ) : (
-              <IoChevronDownCircleOutline />
-            )}
-          </div>
-        </div>
       </div>
-      {openState && <div>{content}</div>}
+      <div>{content}</div>
     </div>
   );
 };

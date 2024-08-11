@@ -159,8 +159,8 @@ const ToDoList = () => {
           <TemplateWrapper
             inputs={categories.generalStudies}
             id="generalStudiesCategory"
-            activeBorder="active:border-my-green"
-            focusBorder="focus:border-my-green"
+            activeBorder="active:border-[#ff758f]"
+            focusBorder="focus:border-[#ff758f]"
             onInputChange={(index, newValue) =>
               handleInputChange("generalStudies", index, newValue)
             }
@@ -173,7 +173,7 @@ const ToDoList = () => {
           />
         }
         state={true}
-        colour="text-my-green"
+        colour="text-[#ff758f]"
         onAdd={() => addInput("generalStudies")}
       />
 
