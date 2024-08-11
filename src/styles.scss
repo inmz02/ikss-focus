@@ -86,6 +86,17 @@ body {
                 background: url(assets/btnTimer2.png) 0px 0px;
               }
             }
+
+            &.expand {
+              width: 30px !important;
+            height: 30px;
+              background: url(assets/expand1.png) 0px 0px;
+
+              &:hover, &:active {
+                background: url(assets/expand2.png) 0px 0px;
+              }
+            }
+
             transition: 300ms;
             -webkit-transition: 300ms;
             -moz-transition: 300ms;
