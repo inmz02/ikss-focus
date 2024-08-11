@@ -1,9 +1,9 @@
-import React from "react";
+import { useState, useEffect} from "react";
 import { ref, set, onValue } from "firebase/database";
-import { db } from "./firebase";
+import { db } from "../firebase";
 
-import MiniSections from "./myComps/MiniSections";
-import TemplateWrapper from "./myComps/TemplateWrapper";
+import MiniSections from "./MiniSections";
+import TemplateWrapper from "./TemplateWrapper";
 
 const ToDoList = () => {
   const [categories, setCategories] = useState({

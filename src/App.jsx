@@ -1,4 +1,5 @@
 // import { useState } from 'react'
+import ToDoList from "./myComps/ToDoList";
 
 // App is the main wrapper of all the contents
 function App() {
@@ -44,6 +45,7 @@ function App() {
             My To-Do List&nbsp; &nbsp; ◌ ｡˚✩( › ̫ ‹ )✩˚ ｡◌
           </div>
           <div className="inn-con">
+            <ToDoList />
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
             omnis ipsum soluta dignissimos nobis hic, dolore quos ea laboriosam
             placeat consequuntur recusandae ratione nostrum incidunt architecto
