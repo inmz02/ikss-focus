@@ -152,9 +152,7 @@ const ToDoList = () => {
   return (
     <div className="flex flex-col gap-7 pl-2 pr-1 overflow-y-auto overflow-x-hidden h-[28rem] md:h-[50rem] myContainerHere">
       <MiniSections
-        title={`${addNumbers(
-          generalStudiesNum
-        )}General Studies ໒꒰ྀི´ ˘ \` ꒱ྀིა`}
+        title={`General Studies ໒꒰ྀི´ ˘ \` ꒱ྀིა`}
         content={
           <TemplateWrapper
             inputs={categories.generalStudies}
@@ -178,9 +176,7 @@ const ToDoList = () => {
       />
 
       <MiniSections
-        title={`${addNumbers(
-          vocabularyBuildingNum
-        )}Vocabulary Building ପ(｡ᵔ ⩊ ᵔ｡)ଓ`}
+        title={`Vocabulary Building ପ(｡ᵔ ⩊ ᵔ｡)ଓ`}
         content={
           <TemplateWrapper
             inputs={categories.vocabularyBuilding}
@@ -204,9 +200,27 @@ const ToDoList = () => {
       />
 
       <MiniSections
-        title={`${addNumbers(
-          listeningAndSpeakingNum
-        )}Listening and Speaking ૮⑅ᐡ•ﻌ•ᐡა`}
+        title={`Grammar ૮( ྀིˊ ᵔ \ˋ)ა`}
+        content={
+          <TemplateWrapper
+            inputs={categories.grammar}
+            id="grammarCategory"
+            activeBorder="active:border-my-brown"
+            focusBorder="focus:border-my-brown"
+            onInputChange={(index, newValue) =>
+              handleInputChange("grammar", index, newValue)
+            }
+            onInputDelete={(index) => handleInputDelete("grammar", index)}
+            onToggleComplete={(index) => toggleComplete("grammar", index)}
+          />
+        }
+        state={true}
+        colour="text-my-brown"
+        onAdd={() => addInput("grammar")}
+      />
+
+      <MiniSections
+        title={`Listening and Speaking ૮⑅ᐡ•ﻌ•ᐡა`}
         content={
           <TemplateWrapper
             inputs={categories.listeningAndSpeaking}
@@ -230,27 +244,7 @@ const ToDoList = () => {
       />
 
       <MiniSections
-        title={`${addNumbers(grammarNum)}Grammar ૮( ྀིˊ ᵔ \ˋ)ა`}
-        content={
-          <TemplateWrapper
-            inputs={categories.grammar}
-            id="grammarCategory"
-            activeBorder="active:border-my-brown"
-            focusBorder="focus:border-my-brown"
-            onInputChange={(index, newValue) =>
-              handleInputChange("grammar", index, newValue)
-            }
-            onInputDelete={(index) => handleInputDelete("grammar", index)}
-            onToggleComplete={(index) => toggleComplete("grammar", index)}
-          />
-        }
-        state={true}
-        colour="text-my-brown"
-        onAdd={() => addInput("grammar")}
-      />
-
-      <MiniSections
-        title={`${addNumbers(readingNum)}Reading (  ु⁎ᴗ_ᴗ⁎)ु.｡o`}
+        title={`Reading (  ु⁎ᴗ_ᴗ⁎)ु.｡o`}
         content={
           <TemplateWrapper
             inputs={categories.reading}
@@ -270,7 +264,7 @@ const ToDoList = () => {
       />
 
       <MiniSections
-        title={`${addNumbers(onlineCourseNum)}Online Course ヾ(*´∇\`)ﾉ`}
+        title={`Online Course ヾ(*´∇\`)ﾉ`}
         content={
           <TemplateWrapper
             inputs={categories.onlineCourse}
