@@ -150,7 +150,7 @@ const ToDoList = () => {
   };
 
   return (
-    <div className="flex flex-col gap-7 mt-9 pl-2 pr-1 overflow-y-auto overflow-x-hidden h-[28rem] md:h-[50rem] myContainerHere">
+    <div className="flex flex-col gap-7 pl-2 pr-1 overflow-y-auto overflow-x-hidden h-[28rem] md:h-[50rem] myContainerHere">
       <MiniSections
         title={`${addNumbers(
           generalStudiesNum
