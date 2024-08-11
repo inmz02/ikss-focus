@@ -69,11 +69,13 @@ body {
 
         .btns {
           @apply flex justify-center items-center gap-7 my-4 mt-6;
+
           .btn {
-            width: 126px;
-            height: 30px;
-            background: url(assets/btn1.png) 0px 0px;
+            width: 177px;
+            height: 41px;
+            background: url(assets/btn1.png);
             cursor: pointer;
+            background-repeat: no-repeat;
 
             &.add {
               background: url(assets/btn1.png) 0px 0px;
@@ -86,7 +88,6 @@ body {
 
             &.timer {
               background: url(assets/btnTimer.png) 0px 0px;
-              margin-left: 0.9rem;
 
               &:hover,
               &:active {
@@ -95,8 +96,8 @@ body {
             }
 
             &.expand {
-              width: 30px !important;
-              height: 30px;
+              width: 41px !important;
+              height: 41px;
               background: url(assets/expand1.png) 0px 0px;
 
               &:hover,
@@ -104,16 +105,6 @@ body {
                 background: url(assets/expand2.png) 0px 0px;
               }
             }
-            transform: scale(1.25);
-            -webkit-transform: scale(1.25);
-            -moz-transform: scale(1.25);
-            -ms-transform: scale(1.25);
-            -o-transform: scale(1.25);
-            transition: 300ms;
-            -webkit-transition: 300ms;
-            -moz-transition: 300ms;
-            -ms-transition: 300ms;
-            -o-transition: 300ms;
           }
         }
 
@@ -134,7 +125,7 @@ body {
           .inn-con {
             min-height: 300px;
             max-height: 600px;
-            height: 360px;
+            height: 370px;
             overflow-y: auto;
 
             &::-webkit-scrollbar {
