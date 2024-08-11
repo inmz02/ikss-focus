@@ -158,8 +158,8 @@ const ToDoList = () => {
           <TemplateWrapper
             inputs={categories.generalStudies}
             id="generalStudiesCategory"
-            activeBorder="active:border-[#ff758f]"
-            focusBorder="focus:border-[#ff758f]"
+            activeBorder="active:border-[#f4acb7]"
+            focusBorder="focus:border-[#f4acb7]"
             onInputChange={(index, newValue) =>
               handleInputChange("generalStudies", index, newValue)
             }
@@ -172,7 +172,7 @@ const ToDoList = () => {
           />
         }
         state={true}
-        colour="text-[#ff758f]"
+        colour="text-[#f4acb7]"
         onAdd={() => addInput("generalStudies")}
       />
 
@@ -183,8 +183,8 @@ const ToDoList = () => {
           <TemplateWrapper
             inputs={categories.vocabularyBuilding}
             id="vocabularyBuildingCategory"
-            activeBorder="active:border-my-blue2"
-            focusBorder="focus:border-my-blue2"
+            activeBorder="active:border-[#f4acb7]"
+            focusBorder="focus:border-[#f4acb7]"
             onInputChange={(index, newValue) =>
               handleInputChange("vocabularyBuilding", index, newValue)
             }
@@ -208,8 +208,8 @@ const ToDoList = () => {
           <TemplateWrapper
             inputs={categories.grammar}
             id="grammarCategory"
-            activeBorder="active:border-my-brown"
-            focusBorder="focus:border-my-brown"
+            activeBorder="active:border-[#f4acb7]"
+            focusBorder="focus:border-[#f4acb7]"
             onInputChange={(index, newValue) =>
               handleInputChange("grammar", index, newValue)
             }
@@ -229,8 +229,8 @@ const ToDoList = () => {
           <TemplateWrapper
             inputs={categories.listeningAndSpeaking}
             id="listeningAndSpeakingCategory"
-            activeBorder="active:border-my-pink"
-            focusBorder="focus:border-my-pink"
+            activeBorder="active:border-[#f4acb7]"
+            focusBorder="focus:border-[#f4acb7]"
             onInputChange={(index, newValue) =>
               handleInputChange("listeningAndSpeaking", index, newValue)
             }
@@ -254,8 +254,8 @@ const ToDoList = () => {
           <TemplateWrapper
             inputs={categories.reading}
             id="readingCategory"
-            activeBorder="active:border-my-yellow"
-            focusBorder="focus:border-my-yellow"
+            activeBorder="active:border-[#f4acb7]"
+            focusBorder="focus:border-[#f4acb7]"
             onInputChange={(index, newValue) =>
               handleInputChange("reading", index, newValue)
             }
@@ -275,8 +275,8 @@ const ToDoList = () => {
           <TemplateWrapper
             inputs={categories.onlineCourse}
             id="onlineCourseCategory"
-            activeBorder="active:border-my-purple"
-            focusBorder="focus:border-my-purple"
+            activeBorder="active:border-[#f4acb7]"
+            focusBorder="focus:border-[#f4acb7]"
             onInputChange={(index, newValue) =>
               handleInputChange("onlineCourse", index, newValue)
             }

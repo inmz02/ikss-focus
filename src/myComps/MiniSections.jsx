@@ -31,7 +31,7 @@ const MiniSections = ({
         onMouseLeave={() => window.innerWidth >= 767 && setIsHovered(false)}
       >
         <h2
-          className={`font-bold ${colour} myCateTitle text-base flex gap-2 items-center`}
+          className={`font-bold ${colour} myCateTitle text-lg flex gap-2 items-center`}
         >
           {title}
           <span>

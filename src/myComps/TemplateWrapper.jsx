@@ -40,7 +40,7 @@ const TemplateWrapper = ({
             <input
               type="text"
               placeholder="추가. . ."
-              className={`text-sm w-[79%] md:w-[89%] border-b active:border-b ${focusBorder} ${activeBorder} border-b-white`}
+              className={`text-sm w-[79%] md:w-[89%] border-b active:border-b ${focusBorder} ${activeBorder} border-b-white outline-none`}
               value={input.text || ""}
               onChange={(e) => {
                 const newValue = e.target.value;
