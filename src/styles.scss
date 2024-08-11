@@ -70,63 +70,6 @@ body {
             drop-shadow(0px 1px 0px #0000001c);
         }
 
-        .btns {
-          @apply flex justify-center items-center gap-5 my-4 mt-6;
-
-          .btn {
-            width: 37px !important;
-            height: 37px !important;
-            background: url(assets/btn1.png);
-            cursor: pointer;
-            background-repeat: no-repeat;
-            background-size: cover;
-
-            &.add {
-              background: url(assets/btn1.png) 0px 0px;
-               background-size: cover;
-
-              &:hover,
-              &:active {
-                background: url(assets/btn2.png) 0px 0px;
-                 background-size: cover;
-              }
-            }
-
-            &.timer {
-              background: url(assets/btnTimer.png) 0px 0px;
-               background-size: cover;
-
-              &:hover,
-              &:active {
-                background: url(assets/btnTimer2.png) 0px 0px;
-                 background-size: cover;
-              }
-            }
-
-            &.save {
-              background: url(assets/save1.png) 0px 0px;
-               background-size: cover;
-
-              &:hover,
-              &:active {
-                background: url(assets/save2.png) 0px 0px;
-                 background-size: cover;
-              }
-            }
-
-            &.expand {
-              background: url(assets/expand1.png) 0px 0px;
-               background-size: cover;
-
-              &:hover,
-              &:active {
-                background: url(assets/expand2.png) 0px 0px;
-                 background-size: cover;
-              }
-            }
-          }
-        }
-
         .border1 {
           width: 100%;
           height: 30px;
@@ -176,10 +119,14 @@ body {
             font-family: "Playfair Display", serif;
             font-weight: 800;
             color: #ffacc5;
-            filter: drop-shadow(0px 0px 1px white)
-              drop-shadow(0px 0px 0px white) drop-shadow(0px 0px 1px white)
-              drop-shadow(0px 0px 0px white) drop-shadow(0px 0px 1px white)
-              drop-shadow(0px 0px 1px white) drop-shadow(0px 1px 0px #0000001c);
+
+            .headMe {
+              filter: drop-shadow(0px 0px 1px white)
+                drop-shadow(0px 0px 0px white) drop-shadow(0px 0px 1px white)
+                drop-shadow(0px 0px 0px white) drop-shadow(0px 0px 1px white)
+                drop-shadow(0px 0px 1px white)
+                drop-shadow(0px 1px 0px #0000001c);
+            }
           }
         }
 
@@ -238,8 +185,112 @@ body {
     -moz-transform: translateX(98%);
     -ms-transform: translateX(98%);
     -o-transform: translateX(98%);
-}
+  }
   100% {
     transform: translateX(0); /* Move back to the original position */
+  }
+}
+
+.btns {
+  @apply flex justify-center items-center gap-5 my-4 mt-6;
+
+  .btn {
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+      drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+      drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
+      drop-shadow(0px 1px 0px #0000001c);
+  }
+}
+
+.btn {
+  width: 37px !important;
+  height: 37px !important;
+  background: url(assets/btn1.png);
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
+    drop-shadow(0px 1px 0px #0000001c);
+
+  &.add {
+    background: url(assets/btn1.png) 0px 0px;
+    background-size: cover;
+
+    &:hover,
+    &:active {
+      background: url(assets/btn2.png) 0px 0px;
+      background-size: cover;
+    }
+  }
+
+  &.timer {
+    background: url(assets/btnTimer.png) 0px 0px;
+    background-size: cover;
+
+    &:hover,
+    &:active {
+      background: url(assets/btnTimer2.png) 0px 0px;
+      background-size: cover;
+    }
+  }
+
+  &.save {
+    background: url(assets/save1.png) 0px 0px;
+    background-size: cover;
+    position: relative;
+
+    &:hover,
+    &:active {
+      background: url(assets/save2.png) 0px 0px;
+      background-size: cover;
+    }
+  }
+
+  &.expand {
+    background: url(assets/expand1.png) 0px 0px;
+    background-size: cover;
+
+    &:hover,
+    &:active {
+      background: url(assets/expand2.png) 0px 0px;
+      background-size: cover;
+    }
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.saveMessgae {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  filter: none !important;
+  -webkit-filter: none !important;
+
+  #message {
+    display: hidden;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 12px;
+
+    &.blink {
+      animation: blink 200ms steps(1) infinite;
+      -webkit-animation: blink 200ms steps(1) infinite;
+      animation-duration: 400ms;
+    }
+
+    img {
+      width: 14px;
+    }
   }
 }

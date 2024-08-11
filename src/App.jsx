@@ -3,6 +3,7 @@ import ToDoList from "./myComps/ToDoList";
 
 // App is the main wrapper of all the contents
 function App() {
+  
   function toggleFullScreen() {
     if (!document.fullscreenElement) {
       // Enter fullscreen mode
@@ -33,12 +34,11 @@ function App() {
           <div className="btn add"></div>
           <div className="btn timer"></div>
           <div className="btn expand" onClick={toggleFullScreen}></div>
-          <div className="btn save"></div>
         </div>
 
         <div className="w-full">
           <div className="cat">
-            <img src="https://64.media.tumblr.com/tumblr_mcsfd9NGC01rnr4eb.gif" />
+            <img src="https://64.media.tumblr.com/tumblr_lsr32n3zus1qhwcy0.gif" />
           </div>
         </div>
 
@@ -46,12 +46,7 @@ function App() {
 
         {/* To Do List Div */}
         <div className="entireToDoListContainer">
-          <div className="myHeader mt-2">
-            My To-Do List&nbsp; &nbsp; ◌ ｡˚✩( › ̫ ‹ )✩˚ ｡◌
-          </div>
-          <div className="inn-con">
-            <ToDoList />
-          </div>
+          <ToDoList />
         </div>
       </div>
     </div>
