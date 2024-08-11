@@ -14,10 +14,10 @@ function App() {
         {/* Buttons */}
         <div className="btns">
           <div className="btn add">
-            <img src="assets/btn1.png" alt="" />
+            <img src="assets/btn1.png" />
           </div>
           <div className="btn timer">
-            <img src="assets/btn1.png" alt="" />
+            <img src="assets/btn1.png" />
           </div>
         </div>
         
