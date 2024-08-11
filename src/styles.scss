@@ -134,7 +134,7 @@ body {
           .inn-con {
             min-height: 300px;
             max-height: 600px;
-            height: 300px;
+            height: 350px;
             overflow-y: auto;
 
             &::-webkit-scrollbar {
@@ -145,21 +145,20 @@ body {
             }
 
             &::-webkit-scrollbar-thumb {
-            background: #ffa4d166;
-            border-radius: 10px;
-            border: 1px solid #ffabd7;
-          }
+              background: #ffa4d166;
+              border-radius: 10px;
+              border: 1px solid #ffabd7;
+            }
 
-          &::-webkit-scrollbar-track {
-            border: 1px solid #ffabd777;
-            border-radius: 10px;
+            &::-webkit-scrollbar-track {
+              border: 1px solid #ffabd777;
+              border-radius: 10px;
+            }
           }
-          }
-
-          
 
           .myHeader {
             font-size: 22px;
+            margin-bottom: 1rem;
             font-family: "Playfair Display", serif;
             font-weight: 800;
             color: #ffacc5;

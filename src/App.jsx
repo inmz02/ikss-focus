@@ -21,7 +21,7 @@ function App() {
 
 
   return (
-    <div className="w-3/5 lg:w-2/4 h-4/5 myOuterContainer rounded-lg p-3 ">
+    <div className="w-3/5 lg:w-2/4 h-[90%] myOuterContainer rounded-lg p-3 ">
       <div className=" h-full bg-white rounded-lg py-7 px-5 border border-[lightgray] myInnerContainer">
         {/* lace borders */}
         <div className="laceBorder tp"></div>
