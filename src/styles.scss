@@ -165,6 +165,32 @@ body {
               drop-shadow(0px 0px 1px white) drop-shadow(0px 1px 0px #0000001c);
           }
         }
+
+        .tickBoxNew {
+          border: 1px solid #00000022;
+          
+          height: 22px;
+          width: 22px;
+          padding: 3px;
+
+          &.incomplete {
+            background-color: #00000015;
+            box-shadow: 0px 0px 5px 1px inset #00000034;
+
+          }
+
+          &.completed {
+            background: url(./assets/checkbg2.png)
+            0px 0px;
+            box-shadow: 0px 0px 5px 1px inset #ff32765b;
+          }
+
+          border-radius: 4px;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -ms-border-radius: 4px;
+          -o-border-radius: 4px;
+        }
       }
     }
   }
