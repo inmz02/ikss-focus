@@ -1,5 +1,6 @@
 import { PiXCircle } from "react-icons/pi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import CustomPopup from "./CustomPopup";
 
 const TemplateWrapper = ({
   inputs = [],
@@ -11,6 +12,49 @@ const TemplateWrapper = ({
   activeBorder,
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
+   const [popupInfo, setPopupInfo] = useState({
+     visible: false,
+     item: null,
+     index: null,
+   });
+  
+  const handleLongPress = (item, index, e) => {
+    e.preventDefault();
+    setPopupInfo({
+      visible: true,
+      item: item.text,
+      index: index,
+    });
+  };
+
+  const handleConfirmDelete = () => {
+    if (popupInfo.index !== null) {
+      onInputDelete(popupInfo.index);
+    }
+    setPopupInfo({ visible: false, item: null, index: null });
+  };
+
+  const handleCancelDelete = () => {
+    setPopupInfo({ visible: false, item: null, index: null });
+  };
+
+  // Hide the popup if clicked outside
+  const handleClickOutside = (e) => {
+    if (
+      popupInfo.visible &&
+      !e.target.closest(".todo-item") &&
+      !e.target.closest(".popup")
+    ) {
+      setPopupInfo({ visible: false, item: null, index: null });
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [popupInfo.visible]);
+
+
 
   return (
     <div className="flex flex-col gap-5" id={id}>
@@ -21,6 +65,7 @@ const TemplateWrapper = ({
             key={index}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
+            onTouchStart={(e) => handleLongPress(input, index, e)}
           >
             <div
               className={`tickBox cursor-pointer ${
@@ -68,6 +113,15 @@ const TemplateWrapper = ({
       ) : (
         <p></p>
       )}
+      {popupInfo.visible && (
+        <CustomPopup
+          item={popupInfo.item}
+          onConfirm={handleConfirmDelete}
+          onCancel={handleCancelDelete}
+        />
+      )}
+
+
     </div>
   );
 };
