@@ -124,9 +124,13 @@ body {
           width: 100%;
 
           .inn-con {
+            @media (max-height: 850px) {
+              height: 360px;
+            }
+            @media (min-height: 851px) {
+              height: 440px;
+            }
             
-            @apply h-[360px] lg:h-[440px];
-
             overflow-y: scroll;
 
             &::-webkit-scrollbar {
