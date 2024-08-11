@@ -126,10 +126,10 @@ body {
 
           .inn-con {
             @media (max-height: 850px) {
-              height: 360px;
+              height: 370px;
             }
             @media (min-height: 851px) {
-              height: 560px;
+              height: 540px;
             }
 
             overflow-y: scroll;
@@ -190,6 +190,13 @@ body {
           -moz-border-radius: 4px;
           -ms-border-radius: 4px;
           -o-border-radius: 4px;
+        }
+
+        .myAddBtn {
+          width: 52px;
+          height: 24px;
+          background-image: url(./assets/add.png);
+          background-size: cover;
         }
       }
     }

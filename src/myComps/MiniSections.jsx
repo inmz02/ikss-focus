@@ -1,6 +1,4 @@
-import {
-  IoAddCircleOutline,
-} from "react-icons/io5";
+
 import { useState, useEffect } from "react";
 
 const MiniSections = ({ title, content, colour, state = false, onAdd }) => {
@@ -38,7 +36,9 @@ const MiniSections = ({ title, content, colour, state = false, onAdd }) => {
               onAdd();
             }}
           >
-            <IoAddCircleOutline />
+            <span>
+              <div className="myAddBtn"></div>
+            </span>
           </span>
         </h2>
       </div>
