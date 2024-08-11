@@ -64,14 +64,14 @@ body {
         }
 
         .btns {
-          @apply flex justify-center items-center gap-4 my-4;
+          @apply flex justify-center items-center gap-7 my-4 mt-6;
           .btn {
             width: 126px;
             height: 30px;
             background: url(assets/btn1.png) 0px 0px;
             cursor: pointer;
-
-            &.add {
+            
+            &.add{
               background: url(assets/btn1.png) 0px 0px;
 
               &:hover, &:active {
@@ -81,6 +81,7 @@ body {
 
             &.timer {
               background: url(assets/btnTimer.png) 0px 0px;
+              margin-left: 0.9rem;
 
               &:hover, &:active {
                 background: url(assets/btnTimer2.png) 0px 0px;
@@ -96,13 +97,17 @@ body {
                 background: url(assets/expand2.png) 0px 0px;
               }
             }
-
+            transform: scale(1.25);
+            -webkit-transform: scale(1.25);
+            -moz-transform: scale(1.25);
+            -ms-transform: scale(1.25);
+            -o-transform: scale(1.25);
             transition: 300ms;
             -webkit-transition: 300ms;
             -moz-transition: 300ms;
             -ms-transition: 300ms;
             -o-transition: 300ms;
-          }
+}
         }
       }
     }
