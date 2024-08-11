@@ -152,7 +152,8 @@ const ToDoList = () => {
   return (
     <div className="flex flex-col gap-7 pr-1 overflow-y-auto overflow-x-hidden h-[28rem] md:h-[50rem] myContainerHere">
       <MiniSections
-        title={`General Studies ໒꒰ྀི´ ˘ \` ꒱ྀིა`}
+        title={`General Studies`}
+        imageScr="https://64.media.tumblr.com/tumblr_lsr38yynjz1qhwcy0.gif"
         content={
           <TemplateWrapper
             inputs={categories.generalStudies}
@@ -176,7 +177,8 @@ const ToDoList = () => {
       />
 
       <MiniSections
-        title={`Vocabulary Building ପ(｡ᵔ ⩊ ᵔ｡)ଓ`}
+        title={`Vocabulary Building`}
+        imageScr="https://64.media.tumblr.com/tumblr_mddkr0hsy71qid2nw.gif"
         content={
           <TemplateWrapper
             inputs={categories.vocabularyBuilding}
@@ -200,7 +202,8 @@ const ToDoList = () => {
       />
 
       <MiniSections
-        title={`Grammar ૮( ྀིˊ ᵔ \ˋ)ა`}
+        title={`Grammar`}
+        imageScr="https://64.media.tumblr.com/ebd63fdc2e638a98d7926bf914f9bd66/tumblr_inline_mojjdl4hXC1qz4rgp.gif"
         content={
           <TemplateWrapper
             inputs={categories.grammar}
@@ -220,7 +223,8 @@ const ToDoList = () => {
       />
 
       <MiniSections
-        title={`Listening and Speaking ૮⑅ᐡ•ﻌ•ᐡა`}
+        title={`Listening and Speaking`}
+        imageScr="https://64.media.tumblr.com/tumblr_m9nfw1efge1qid2nw.gif"
         content={
           <TemplateWrapper
             inputs={categories.listeningAndSpeaking}
@@ -244,7 +248,8 @@ const ToDoList = () => {
       />
 
       <MiniSections
-        title={`Reading (  ु⁎ᴗ_ᴗ⁎)ु.｡o`}
+        title={`Reading`}
+        imageScr="https://64.media.tumblr.com/tumblr_lsr3eo1Sa11qhwcy0.gif"
         content={
           <TemplateWrapper
             inputs={categories.reading}
@@ -264,7 +269,8 @@ const ToDoList = () => {
       />
 
       <MiniSections
-        title={`Online Course ヾ(*´∇\`)ﾉ`}
+        title={`Online Course`}
+        imageScr="https://64.media.tumblr.com/a02754c161128112b518c3f0ec9e3850/tumblr_inline_mkhdgzHeZB1qz4rgp.gif"
         content={
           <TemplateWrapper
             inputs={categories.onlineCourse}

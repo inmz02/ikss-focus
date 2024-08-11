@@ -1,22 +1,27 @@
 
 import { useState, useEffect } from "react";
 
-const MiniSections = ({ title, content, colour, state = false, onAdd }) => {
+const MiniSections = ({
+  title,
+  content,
+  colour,
+  state = false,
+  onAdd,
+  imageScr,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isMdOrLarger, setIsMdOrLarger] = useState(window.innerWidth >= 767);
 
-   useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setIsMdOrLarger(window.innerWidth >= 767);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     handleResize(); // Check on mount
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
-
-
 
   return (
     <div>
@@ -25,8 +30,13 @@ const MiniSections = ({ title, content, colour, state = false, onAdd }) => {
         onMouseEnter={() => window.innerWidth >= 767 && setIsHovered(true)}
         onMouseLeave={() => window.innerWidth >= 767 && setIsHovered(false)}
       >
-        <h2 className={`font-bold ${colour} text-base flex gap-2 items-center`}>
+        <h2
+          className={`font-bold ${colour} myCateTitle text-base flex gap-2 items-center`}
+        >
           {title}
+          <span>
+            <img src={imageScr} />
+          </span>
           <span
             className={`text-2xl cursor-pointer ${
               isMdOrLarger ? (isHovered ? "block" : "hidden") : "block"

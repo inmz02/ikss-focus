@@ -10,7 +10,6 @@ const TemplateWrapper = ({
   focusBorder,
   activeBorder,
 }) => {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <div className="flex flex-col gap-5" id={id}>
@@ -19,8 +18,6 @@ const TemplateWrapper = ({
           <div
             className="flex gap-2 items-center w-full"
             key={index}
-            onMouseEnter={() => setHoveredIndex(index)}
-            onMouseLeave={() => setHoveredIndex(null)}
           >
             <div
               className={`tickBox cursor-pointer ${
