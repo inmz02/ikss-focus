@@ -203,8 +203,8 @@ body {
 }
 
 .btn {
-  width: 37px !important;
-  height: 37px !important;
+  width: 37px;
+  height: 37px;
   background: url(assets/btn1.png);
   cursor: pointer;
   background-repeat: no-repeat;
@@ -237,6 +237,8 @@ body {
   }
 
   &.save {
+    width: 32px;
+    height: 32px;
     background: url(assets/save1.png) 0px 0px;
     background-size: cover;
     position: relative;
