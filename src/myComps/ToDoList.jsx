@@ -144,7 +144,7 @@ const ToDoList = () => {
           </div>
         </div>
         <div className="inn-con">
-          <div className="flex flex-col gap-7 pr-1 overflow-y-auto overflow-x-hidden h-[28rem] md:h-[50rem] myContainerHere">
+          <div className="inn flex flex-col gap-7 pr-1 overflow-y-auto overflow-x-hidden h-[28rem] md:h-[50rem] myContainerHere">
             <MiniSections
               title={`General Studies`}
               imageScr="https://64.media.tumblr.com/tumblr_lsr38yynjz1qhwcy0.gif"

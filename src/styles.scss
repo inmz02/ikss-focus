@@ -15,8 +15,8 @@ body {
   height: 100dvh;
   width: 100%;
   display: flex;
-  justify-content: center !important;
-  align-items: center !important;
+  justify-content: center;
+  align-items: center;
   font-family: "Libre Franklin", sans-serif;
   font-size: 14px;
   color: #484848;
@@ -34,7 +34,8 @@ body {
       background-attachment: fixed;
       border: 1px dotted lightgray;
       box-shadow: 0px 0px 6px inset #ff98a981;
-      height: 90%;
+
+      @apply h-full md:h-[90%];
 
       .myInnerContainer {
         position: relative;
@@ -63,6 +64,7 @@ body {
           font-family: "Playfair Display", serif;
           text-align: center;
           font-size: 2rem;
+          @apply text-[1.2rem] md:text-[2rem];
           color: #f0a2b8;
           filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
             drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
@@ -85,14 +87,13 @@ body {
           width: 100%;
 
           .inn-con {
+            overflow-y: scroll; /* Always show vertical scrollbar */
             @media (max-height: 850px) {
               height: 360px;
             }
             @media (min-height: 851px) {
               height: 530px;
             }
-
-            overflow-y: scroll;
 
             &::-webkit-scrollbar {
               width: 8px;
@@ -111,6 +112,11 @@ body {
               border: 1px solid #ffabd777;
               border-radius: 10px;
             }
+
+            .inn {
+              overflow: hidden; /* Hide scrollbars within .inn */
+              box-sizing: content-box;
+            }
           }
 
           .myHeader {
@@ -119,6 +125,7 @@ body {
             font-family: "Playfair Display", serif;
             font-weight: 800;
             color: #ffacc5;
+            @apply text-[15px] md:text-[22px];
 
             .headMe {
               filter: drop-shadow(0px 0px 1px white)
@@ -171,8 +178,8 @@ body {
 }
 
 .cat {
-  animation: moveSideways 30s infinite;
-  -webkit-animation: moveSideways 30s infinite;
+  animation: moveSideways 50s infinite;
+  -webkit-animation: moveSideways 50s infinite;
 }
 
 @keyframes moveSideways {
@@ -192,14 +199,12 @@ body {
 }
 
 .btns {
-  @apply flex justify-center items-center gap-5 my-4 mt-6;
+  @apply flex justify-center items-center gap-5 my-2 md:my-4 mt-6 md:mt-4 ;
 
-  .btn {
-    filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
-      drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
-      drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
-      drop-shadow(0px 1px 0px #0000001c);
-  }
+  .btn.save {
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)      drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)      drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)      drop-shadow(0px 1px 0px #0000001c);
+    -webkit-filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white);
+}
 }
 
 .btn {
@@ -209,13 +214,15 @@ body {
   cursor: pointer;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
-    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
-    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
-    drop-shadow(0px 1px 0px #0000001c);
+  @apply w-[28px] h-[28px] md:w-[32px] md:h-[32px];
+  
 
   &.add {
     background: url(assets/btn1.png) 0px 0px;
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
+    drop-shadow(0px 1px 0px #0000001c);
     background-size: cover;
 
     &:hover,
@@ -227,6 +234,10 @@ body {
 
   &.timer {
     background: url(assets/btnTimer.png) 0px 0px;
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
+    drop-shadow(0px 1px 0px #0000001c);
     background-size: cover;
 
     &:hover,
@@ -237,8 +248,8 @@ body {
   }
 
   &.save {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     background: url(assets/save1.png) 0px 0px;
     background-size: cover;
     position: relative;
@@ -252,6 +263,10 @@ body {
 
   &.expand {
     background: url(assets/expand1.png) 0px 0px;
+    filter: drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 0px white)
+    drop-shadow(0px 0px 1px white) drop-shadow(0px 0px 1px white)
+    drop-shadow(0px 1px 0px #0000001c);
     background-size: cover;
 
     &:hover,

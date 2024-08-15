@@ -15,44 +15,43 @@ const TemplateWrapper = ({
     <div className="flex flex-col gap-5" id={id}>
       {inputs && inputs.length > 0 ? (
         inputs.map((input, index) => (
-          <div
-            className="flex gap-2 items-center w-full"
-            key={index}
-          >
-            <div
-              className={`tickBox cursor-pointer ${
-                !input.text ? "cursor-not-allowed" : ""
-              }`}
-              onClick={() => {
-                if (input.text) {
-                  onToggleComplete(index);
-                }
-              }}
-            >
+          <div className="flex pr-2 items-center w-full" key={index}>
+            <div className="inputWrapper flex w-[100%] gap-2">
               <div
-                className={` tickBoxNew 
+                className={`tickBox cursor-pointer ${
+                  !input.text ? "cursor-not-allowed" : ""
+                }`}
+                onClick={() => {
+                  if (input.text) {
+                    onToggleComplete(index);
+                  }
+                }}
+              >
+                <div
+                  className={` tickBoxNew 
                 ${input.completed ? "completed" : "incomplete"}
               `}
-              >
-                <div className="innerTickBox"></div>
+                >
+                  <div className="innerTickBox"></div>
+                </div>
               </div>
+              <input
+                type="text"
+                placeholder="추가. . ."
+                className={`text-sm w-[79%] md:w-[89%] border-b active:border-b ${focusBorder} ${activeBorder} border-b-white outline-none`}
+                value={input.text || ""}
+                onChange={(e) => {
+                  const newValue = e.target.value;
+                  onInputChange(index, newValue);
+                }}
+                onBlur={(e) => {
+                  const newValue = e.target.value;
+                  if (newValue.trim() === "") {
+                    onInputDelete(index);
+                  }
+                }}
+              />
             </div>
-            <input
-              type="text"
-              placeholder="추가. . ."
-              className={`text-sm w-[79%] md:w-[89%] border-b active:border-b ${focusBorder} ${activeBorder} border-b-white outline-none`}
-              value={input.text || ""}
-              onChange={(e) => {
-                const newValue = e.target.value;
-                onInputChange(index, newValue);
-              }}
-              onBlur={(e) => {
-                const newValue = e.target.value;
-                if (newValue.trim() === "") {
-                  onInputDelete(index);
-                }
-              }}
-            />
             <PiTrash
               className={`text-lg text-[#f4acb7] cursor-pointer`}
               onClick={() => onInputDelete(index)}
